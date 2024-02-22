@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" light="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My online bus service</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white">
+    <header class="mr-28 ml-28">
+        <nav class="flex items-center justify-between mb-5">
+            <h2 class="text-3xl font-extrabold text-black">P-Ticket</h2>
+            <!-- add anchor -->
+            <div class="text-center">
+                <a href="" class="mr-12 text-black">Home</a>
+                <a href="" class="mr-12 text-black">About</a>
+                <a href="" class="mr-12 text-black">Destination</a>
+                <a href="" class="text-black">Search</a>
+            </div>
+            <!-- button -->
+            <div class="items-center text-center mb-1 mt-6">
+                <button class="btn bg-[#b5eeadaa] text-[#1DD100]">Bus <span><img src="images/bus-icon.png"
+                            alt=""></span></button>
+            </div>
+        </nav>
+        <!-- nav banner -->
+        <section class=" flex justify-center items-center>
+            <div class=" relative"><img src="images/banner.png" class="min-w-full brightness-75"></div>
+            <div class="absolute  text-center">
+                <h1 class="text-6xl font-extrabold text-white mt-24">End-to-End Travel with </h1>
+                <h1 class="text-5xl font-extrabold text-[#1DD100] mt-4">P Paribahan</h1>
+                <p class="text-white mt-3 mb-6">"Experience seamless End-to-End Travel with P Paribahan, where you can
+                    not
+                    only
+                    <br> book
+                    your journey but
+                    also run unit tests and view results directly <br> within the app for a streamlined travel <br>
+                    planning
+                    process."</p>
+                <button id="buy-ticket-Button" class="btn btn-accent bg-[#1DD100] text-base">Buy Tickets</button>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <!-- best buy -->
+        <section class="mr-28 ml-28 mt-10">
+            <h1 class="text-6xl font-semibold text-center mt-28 mb-16 text-black">Best offers for you</h1>
+            <div class="flex items-center justify-between gap-16">
+                <div class="relative">
+                    <img class=" bg-[#FFBF0F] rounded-3xl h-[300px] w-[900px]">
+                    <div class="flex">
+                        <div class="absolute top-28 translate-x-20 text-black">
+                            <h1 class="text-6xl font-extrabold mb-2">15% OFF</h1>
+                            <p class="mb-2 text-xl font-bold">on your next purchase</p>
+                            <p>use by January 2024</p>
+                        </div>
+                        <div class="absolute top-32 translate-x-[600px]  text-black text-center">
+                            <h1 class=" font-bold text-4xl text-black mb-2">NEW<sub>15</sub></h1>
+                            <p class="text-xl">Coupon Code</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img class=" bg-[#F78C9C] rounded-3xl h-[300px] w-[900px]">
+                    <div class="flex">
+                        <div class="absolute top-28 translate-x-20 text-black">
+                            <h1 class="text-6xl font-extrabold">20% OFF</h1>
+                            <p class="mb-2 text-xl font-bold">on your next purchase</p>
+                            <p>use by January 2024</p>
+                        </div>
+                        <div class="absolute top-32 translate-x-[600px]  text-black text-center">
+                            <h1 class=" font-semibold text-3xl text-black mb-2">Couple 20</h1>
+                            <p class="text-xl">Coupon Code</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-16 mb-36">
+                <button class="btn border-[#1DD100] border-solid bg-white text-[#1DD100] font-bold">See All
+                    Offers</button>
+            </div>
+        </section>
+
+        <section id="ticket-Section" class="mr-28 ml-28 mt-10">
+            <!-- full ticket section -->
+            <section>
+                <!-- P.H Paribahan section -->
+                <div class=" text-center mb-24">
+                    <h3 class="text-4xl font-medium text-black mb-4">P.H Paribahan</h3>
+                    <p>Embark on a scenic bus journey through breathtaking landscapes, where every mile
+                        traversed <br>
+                        unveils a new chapter of adventure and discovery.</p>
+                </div>
+                <div class="flex items-center justify-between border bg-[#FFFFFF] rounded-2xl pr-32 pl-8">
+                    <div>
+                        <div class="flex w-[1000px] h-auto justify-between">
+                            <div class="flex items-center">
+                                <img src="images/bus-logo.png" class="pt-6 mr-2">
+                                <div class="text-center">
+                                    <h2 class="text-3xl font-semibold text-black">Greenline Paribahan</h2>
+                                    <p class="">Coach-009-WEB ! AC_Business</p>
+                                </div>
+                            </div>
+                            <div
+                                class="w-[180px] h-[50px] rounded-md bg-[#1DD100] mb-10 mt-10 flex text-[black] font-medium items-center">
+                                <img src="images/seat-gray.png" alt="">
+                                <p class="text-xl ml-3"><span id="totalTickets">40</span>Seats left</p>
+
+                            </div>
+                        </div>
+
+                        <div class="border-solid bg-[#F7F8F8] rounded-lg p-10">
+                            <div class="flex justify-between mb-4">
+                                <p class="text-black font-medium">Route</p>
+                                <p class="text-black font-semibold">Dhaka - Sylhet</p>
+                            </div>
+                            <div class="flex justify-between mb-4">
+                                <p class="text-black font-medium">Departure Time</p>
+                                <p class="text-black font-semibold">9:00 PM</p>
+                            </div>
+                            <div class="flex justify-between">
+                                <p class="border-2 border-solid bg-slate-300 rounded-md h-8 w-52 text-center
+                                    font-medium text-black">
+                                    Boarding
+                                    Point -
+                                    Laxmipur</p>
+                                <p class="border-2 border-solid text-black font-medium bg-slate-300 rounded-md h-8 w-52
+                                    text-center">
+                                    Dropping
+                                    Point - Bogura</p>
+                                <p class="border-2 border-solid text-black font-medium bg-slate-300 rounded-md h-8 w-52
+                                    text-center">
+                                    Est. Time
+                                    - 11 Hour</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items-center">
+                        <img src="images/fare.png" class="ml-3">
+                        <p class="text-2xl font-bold mt-3 mb-1 text-black">550 Taka</p>
+                        <p class="text-xl ml-2 text-black">Per Seat</p>
+                    </div>
+                </div>
+            </section>
+            <section class="flex justify-between mt-24 bg-[#FFFFFF] rounded-2xl p-10">
+                <section class="w-[600px]">
+                    <div>
+                        <h2 class="text-2xl font-medium text-black mb-5">Select Your Seat</h2>
+                        <div class="flex justify-between">
+                            <div class="flex mb-6">
+                                <img src="images/seat-gray.png" alt="">
+                                <h3 class="text-gray-400 ml">Available</h3>
+                            </div>
+                            <div class="flex mb-6">
+                                <img src="images/seat-green-filled.png" alt="">
+                                <h3 class="text-[#1DD100]">Selected</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-[500px] mb-5"><img src="images/Group 56.png" class="">
+                    </div>
+                    <div>
+                        <div class="w-[600px]">
+                            <div class="rounded-lg shadow-lg">
+                                <div class="">
+                                    <div class="grid grid-cols-5 gap-10 p-4" id="ticketGrid">
+                                        <!-- <button class="h-14">A</button>
+                                        <button class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">A1</button>
+                                        <button class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">A2</button>
+                                        <button class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">A3</button>
+                                        <button class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">A4</button>
+                                        <button class="h-14">B</button>
+                                        <button class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">B1</button>
+                                        <button onclick="toggleTicket(this)"
+                                            class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">B2</button>
+                                        <button onclick="toggleTicket(this)"
+                                            class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">B3</button>
+                                        <button onclick="toggleTicket(this)"
+                                            class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">B4</button>
+                                        <button class="h-14">C</button>
+                                        <button class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">C1</button>
+                                        <button onclick="toggleTicket(this)"
+                                            class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">C2</button>
+                                        <button onclick="toggleTicket(this)"
+                                            class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">C3</button>
+                                        <button onclick="toggleTicket(this)"
+                                            class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">C4</button>
+                                        <button class="h-14">D</button>
+                                        <button class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">D1</button>
+                                        <button onclick="toggleTicket(this)"
+                                            class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">D2</button>
+                                        <button onclick="toggleTicket(this)"
+                                            class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">D3</button>
+                                        <button onclick="toggleTicket(this)"
+                                            class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">D4</button>
+                                        <button class="h-14">E</button>
+                                        <button class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">E1</button>
+                                        <button onclick="toggleTicket(this)"
+                                            class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">E2</button>
+                                        <button onclick="toggleTicket(this)"
+                                            class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">E3</button>
+                                        <button onclick="toggleTicket(this)"
+                                            class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">E4</button>
+                                        <button class="h-14">F</button>
+                                        <button class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">F1</button>
+                                        <button onclick="toggleTicket(this)"
+                                            class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">F2</button>
+                                        <button onclick="toggleTicket(this)"
+                                            class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">F3</button>
+                                        <button onclick="toggleTicket(this)"
+                                            class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">F4</button>
+                                        <button class="h-14">G</button>
+                                        <button class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">G1</button>
+                                        <button onclick="toggleTicket(this)"
+                                            class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">G2</button>
+                                        <button onclick="toggleTicket(this)"
+                                            class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">G3</button>
+                                        <button onclick="toggleTicket(this)"
+                                            class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">G4</button>
+                                        <button class="h-14">H</button>
+                                        <button class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">H1</button>
+                                        <button onclick="toggleTicket(this)"
+                                            class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">H2</button>
+                                        <button onclick="toggleTicket(this)"
+                                            class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">H3</button>
+                                        <button onclick="toggleTicket(this)"
+                                            class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">H4</button>
+                                        <button class="h-14">I</button>
+                                        <button class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">I1</button>
+                                        <button onclick="toggleTicket(this)"
+                                            class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">I2</button>
+                                        <button onclick="toggleTicket(this)"
+                                            class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">I3</button>
+                                        <button onclick="toggleTicket(this)"
+                                            class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">I4</button>
+                                        <button class="h-14">J</button>
+                                        <button class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">J1</button>
+                                        <button onclick="toggleTicket(this)"
+                                            class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">J2</button>
+                                        <button onclick="toggleTicket(this)"
+                                            class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">J3</button>
+                                        <button onclick="toggleTicket(this)"
+                                            class="bg-[#F7F8F880] rounded-lg py-2 text-center brightness-75"
+                                            onclick="toggleTicket(this)">J4</button> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+                </section>
+                <section>
+                    <h2 class="text-2xl text-black font-medium">Select Your Seat</h2>
+                    <div class=" bg-[#F7F8F8] pr-8 pl-8 pb-8 pt-4 mt-4 rounded-2xl w-[700px]">
+                        <div class="mt-3 mb-3">
+                            <div class="flex justify-between mb-4">
+                                <p class="px-4 py-2 text-black font-semibold flex gap-1">Seat <span
+                                        class="border border-solid bg-green-500 px-2 rounded-lg colo text-white"
+                                        id="selectedSeat">0</span>
+                                </p>
+
+                                <p class=" px-4 py-2 text-black font-semibold">Class</p>
+                                <p class="px-4 py-2 text-black font-semibold">Price</p>
+                            </div>
+                            <div class="" id="mainSeat">
+
+                                <!-- <div class="flex justify-between" id="seat">
+
+                                </div> -->
+
+
+                            </div>
+                            <div class="flex justify-between mb-4 mt-5">
+                                <p class="px-4 py-2 text-black font-semibold">Total Price</p>
+                                <p class="px-4 py-2 text-black"></p>
+                                <p class="px-4 py-2 text-black font-semibold" id="totalPriceCounted">0</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-2 items-center justify-between">
+                            <input type="text" placeholder="Have any coupon?"
+                                class=" ml-2 rounded-lg bg-white p-4 w-full" disabled>
+                            <button class=" px-6 py-2 bg-[#1DD100] rounded-lg text-white font-semibold h-14"
+                                disabled>Apply</button>
+
+                        </div>
+                        <div class="flex text-xl mt-6 justify-between">
+                            <h3 class="ml-2 text-black font-semibold">Grand Total</h3>
+                            <h3 class="ml-20 text-black font-semibold" id="grandPriceCounted">0</h3>
+                        </div>
+                    </div>
+                    <div class="mt-8 mb-8">
+                        <h2 class="text-black font-semibold text-xl mb-4">Passenger Name*</h2>
+                        <input type="name" placeholder="Enter your name" class="rounded-lg border bg-white p-4 w-full">
+                    </div>
+                    <div class="mt-8 mb-8">
+                        <h2 class="text-black font-semibold text-xl mb-4">Phone Number*</h2>
+                        <input type="number" placeholder="Enter your phone number" id="phoneNumberInput"
+                            class="rounded-lg border bg-white p-4 w-full">
+                    </div>
+                    <div class="mb-8">
+                        <h2 class="text-black font-semibold text-xl mb-4">Email ID</h2>
+                        <input type="email" placeholder="Enter your email id"
+                            class=" rounded-lg border bg-white p-4 w-full">
+                    </div>
+                    <button
+                        class=" btn btn-success bg-[#1DD100] pb-14 font-bold p-5 rounded-3xl text-2xl w-full text-white"
+                        id="submitButton" disabled onclick="my_modal_5.showModal()">Next</button>
+                    <div class=" flex gap-10 justify-center mt-6">
+                        <p class="text-black text-xl underline">Terms and Conditions</p>
+                        <p class="text-black text-xl underline">Cancellation Policy</p>
+                    </div>
+
+                    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                        <div
+                            class="bg-[#FFFFFF] text-center flex flex-col justify-center items-center p-20 rounded-3xl">
+                            <img src="images/success.png">
+                            <h1 class="text-xl font-bold text-[#27AE60] mt-5 mb-8">SUCCESS</h1>
+                            <p class="text-xl font-medium text-black">Thank you for Booking Our Bus Seats.</p>
+                            <p class="text-xl font-medium text-black">We are working hard to find the best service and
+                                deals for you</p>
+                            <p class="text-xl mt-3">Shortly you will find a confirmation in your email.</p>
+                            <div class="modal-action">
+                                <form method="dialog">
+                                    <button class="btn btn-success rounded-full px-20 text-xl
+                                    bg-[#27AE60] text-white mt-4">Continue</button>
+                                </form>
+                            </div>
+                        </div>
+
+                    </dialog>
+
+                </section>
+            </section>
+        </section>
+    </main>
+    <!-- Open the modal using ID.showModal() method -->
+    <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+
+    <footer></footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

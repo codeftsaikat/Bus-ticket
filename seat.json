@@ -1,0 +1,94 @@
+{
+  "seatGroups": [
+    {
+      "group": "A",
+      "seats": [
+        {"title": "A1", "price": 550},
+        {"title": "A2", "price": 550},
+        {"title": "A3", "price": 550},
+        {"title": "A4", "price": 550}
+      ]
+    },
+    {
+      "group": "B",
+      "seats": [
+        {"title": "B1", "price": 550},
+        {"title": "B2", "price": 550},
+        {"title": "B3", "price": 550},
+        {"title": "B4", "price": 550}
+      ]
+    },
+    {
+      "group": "C",
+      "seats": [
+        {"title": "C1", "price": 550},
+        {"title": "C2", "price": 550},
+        {"title": "C3", "price": 550},
+        {"title": "C4", "price": 550}
+      ]
+    },
+    {
+      "group": "D",
+      "seats": [
+        {"title": "D1", "price": 550},
+        {"title": "D2", "price": 550},
+        {"title": "D3", "price": 550},
+        {"title": "D4", "price": 550}
+      ]
+    },
+    {
+      "group": "E",
+      "seats": [
+        {"title": "E1", "price": 550},
+        {"title": "E2", "price": 550},
+        {"title": "E3", "price": 550},
+        {"title": "E4", "price": 550}
+      ]
+    },
+    {
+      "group": "F",
+      "seats": [
+        {"title": "F1", "price": 550},
+        {"title": "F2", "price": 550},
+        {"title": "F3", "price": 550},
+        {"title": "F4", "price": 550}
+      ]
+    },
+    {
+      "group": "G",
+      "seats": [
+        {"title": "G1", "price": 550},
+        {"title": "G2", "price": 550},
+        {"title": "G3", "price": 550},
+        {"title": "G4", "price": 550}
+      ]
+    },
+    {
+      "group": "H",
+      "seats": [
+        {"title": "H1", "price": 550},
+        {"title": "H2", "price": 550},
+        {"title": "H3", "price": 550},
+        {"title": "H4", "price": 550}
+      ]
+    },
+    {
+      "group": "I",
+      "seats": [
+        {"title": "I1", "price": 550},
+        {"title": "I2", "price": 550},
+        {"title": "I3", "price": 550},
+        {"title": "I4", "price": 550}
+      ]
+    },
+    {
+      "group": "J",
+      "seats": [
+        {"title": "J1", "price": 550},
+        {"title": "J2", "price": 550},
+        {"title": "J3", "price": 550},
+        {"title": "J4", "price": 550}
+      ]
+    }
+  ]
+}
